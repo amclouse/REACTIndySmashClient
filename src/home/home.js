@@ -4,10 +4,13 @@ import Sidebar from './Navbar'
 
 
 const Home = (props) => {
-    return(
+    return (
+
         <div>
+
             <Button onClick={props.clickLogout}>Logout</Button>
-            <Sidebar token={props.token}/>
+            <Sidebar className="sidebar" token={props.token} />
+
         </div>
     )
 }

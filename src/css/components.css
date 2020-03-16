@@ -1,0 +1,72 @@
+/* Auth */
+.jumbotron {
+    background-image: 
+    linear-gradient(90deg, rgba(8,0,36,0.4822303921568627) 0%, rgba(250,0,0,0.3477766106442577) 12%, rgba(227,211,180,0.6446953781512605) 39%, rgba(250,0,0,0.3449754901960784) 66%, rgba(8,0,36,0.6250875350140056) 100%),
+    url('https://venturebeat.com/wp-content/uploads/2018/06/Super-Smash-Bros-Switch-E3-2018.jpg?w=1200&strip=all');
+    background-size: cover;
+    display: block;
+    font-weight: 20px;
+    height: 400px;
+    margin: 0px;
+}
+.overlay {
+    background: rgb(36,3,0);
+    background: linear-gradient(90deg, rgba(36,3,0,0.3841911764705882) 0%, rgba(250,0,0,0.3477766106442577) 3%, rgba(227,211,180,0.6446953781512605) 64%, rgba(0,0,0,0.3757878151260504) 100%);
+}
+
+.display-3 {
+    font-size: 200px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color:#080024;
+    
+    /* font-weight: bold; */
+}
+
+.lead {
+    color: white;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    font-size: 3em;
+}
+
+.login-button {
+    background-image: url(./assets/samus-helmet-png-1-transparent.png);
+    /* background-color:  */
+}
+
+/* Nav */
+.Nav {
+    background-color: black !important;
+    height: 70px !important;
+    /* text */
+    color: black;
+    font-family: 'Roboto Mono', monospace;
+    list-style: inline;
+}
+.nav-link {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-link :hover {
+    color: red; 
+}
+
+.login-button {
+    float: right !important;
+}
+/* Tourney Table */
+
+.tourney-table {
+    background-image: 
+    linear-gradient(90deg, rgba(8,0,36,0.6811099439775911) 0%, rgba(25,0,250,0.29175420168067223) 12%, rgba(227,211,180,0.4234068627450981) 39%, rgba(0,160,250,0.196516106442577) 66%, rgba(8,0,36,0.5018382352941176) 100%),
+    url('https://www.ssbwiki.com/images/thumb/a/a6/Dark_Samus_SSBU.png/1200px-Dark_Samus_SSBU.png');
+    background-size: cover;
+}
+.thead {
+
+}
+.table-td {
+    font-size: 30px !important;
+    font-weight: bold;
+}

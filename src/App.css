@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  /* background-color: black	; */
+  color: black;
+  /* font-family: 'Passion One', cursive; */
+  /* font-weight: 4px !important; */
 }
 
 .App-logo {

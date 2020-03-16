@@ -10,9 +10,9 @@ const TourneyEdit = (props) => {
     const [editFormat, setEditFormat] = useState(props.tourneysToUpdate.format)
     const [editVersion, setEditVersion] = useState(props.tourneysToUpdate.version)
     const [editPrizePool, setEditPrizePool] = useState(props.tourneysToUpdate.prizePool)
-    const workoutUpdate = (event, tourneys) => {
+    const tourneyUpdate = (event, tourneys) => {
         event.preventDefault();
-        fetch(`https://localhost3001/smash/update/${props.tourneysToUpdate.id}`, {
+        fetch(`http://localhost:3002/smash/tourney/edit/${props.tourneysToUpdate.id}`, {
             method: 'PUT',
             body: JSON.stringify({name: editName, location: editLocation, date: editDate, maxPlayers: editMaxPlayers, format: editFormat, version: editVersion, prizePool: editPrizePool}),
             headers: new Headers({
@@ -22,14 +22,15 @@ const TourneyEdit = (props) => {
         }) .then((res) => {
             props.fetchTourneys();
             props.updateOff()
+            // console.log('Edit this')
         })
     }
 
     return(
         <Modal isOpen={true}>
-            <ModalHeader>Log a Workout</ModalHeader>
+            <ModalHeader>Edit Tournament</ModalHeader>
             <ModalBody>
-                <Form onSubmit={workoutUpdate}>
+                <Form onSubmit={tourneyUpdate}>
                 <FormGroup>
                     <Label htmlFor="result">Change Name:</Label>
                     <Input name="result" value={editName} onChange={(e)  => setEditName(e.target.value)}/>
@@ -52,14 +53,14 @@ const TourneyEdit = (props) => {
                 </FormGroup>
                 <FormGroup>
                     <Label htmlFor="description">Change Version:</Label>
-                    <Input name="description" value={editDesc} onChange={(e)  => setEditDesc(e.target.value)}/>
+                    <Input name="description" value={editVersion} onChange={(e)  => setEditVersion(e.target.value)}/>
                 </FormGroup>
                 <FormGroup>
                     <Label htmlFor="description">Change Prize Pool:</Label>
-                    <Input name="description" value={editDesc} onChange={(e)  => setEditDesc(e.target.value)}/>
+                    <Input name="description" value={editPrizePool} onChange={(e)  => setEditPrizePool(e.target.value)}/>
                 </FormGroup>
 
-                <Button type="submit">Update Workout</Button>
+                <Button type="submit">Update Tournament</Button>
                 </Form>
             </ModalBody>
         </Modal>

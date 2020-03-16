@@ -8,18 +8,22 @@ import {
 } from 'react-router-dom'
 import Home from './home'
 import TourneyIndex from '../tournaments/TourneyIndex'
+import { Button } from 'reactstrap'
+// import TourneyDisplayAll from '../tournaments/TourneyDisplayAll'
+
+
 
 const Sidebar = (props) => {
   return (
     <div>
-      <h3>SMASH INDY</h3>
-      <Nav>
+      <h3></h3>
+      <Nav className="Nav">
         <NavItem>
-          <NavLink href="#"><Link to="/">Home</Link></NavLink>
+          <NavLink className="nav-link" href="#"><Link to="/">Home</Link></NavLink>
         </NavItem>
-        <NavLink href="#"><Link to="/tourney">Host/Create</Link></NavLink>
+        <NavLink href="#"><Link to="/tourney">Profile</Link></NavLink>
         <NavItem>
-          <NavLink href="#">Find Tournaments</NavLink>
+          <NavLink href="#"><Link to="/findtourneys">Find Tournaments</Link></NavLink>
         </NavItem>
         <NavItem>
           <NavLink disabled href="#"></NavLink>
@@ -30,8 +34,9 @@ const Sidebar = (props) => {
       </Nav>
       <hr />
       <Switch>
-      <Route exact path="/home"><Home /></Route>
-      <Route exact path="/tourney"><TourneyIndex token={props.token} /></Route>
+        <Route exact path="/home"><Home /></Route>
+        <Route exact path="/tourney"><TourneyIndex token={props.token} /></Route>
+        {/* <Route exact path="/findtourneys"><TourneyDisplayAll token={props.token} /></Route> */}
       </Switch>
     </div>
   );

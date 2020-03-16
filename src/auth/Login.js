@@ -36,9 +36,9 @@ const Login = (props) => {
         <Input onChange={(e) => setPassword(e.target.value)} name="password" value={password} placeholder="Password" />
       </FormGroup>
       {' '}
-      <Button type="submit">Submit</Button>
+      <Button type="submit" className="login-button">Submit</Button>
     </Form>
   );
 }
 
-export default Login
+export default Login;
