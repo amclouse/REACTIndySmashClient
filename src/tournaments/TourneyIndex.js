@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'reactstrap';
 import TourneyCreate from './TourneyCreate'
 import TourneyTable from './TourneyTable';
 import TourneyEdit from './TourneyEdit'
+import APIURL from '../../src/helpers/environment'
 
 
 const TourneyIndex = (props) => {
@@ -13,7 +14,7 @@ const TourneyIndex = (props) => {
 
     const fetchTourneys = () => {
         console.log('INDEX HIT')
-        fetch('http://localhost:3002/smash/tourney/mytourneys', {
+        fetch(`${APIURL}/smash/tourney/mytourneys`, {
             method: 'GET',
             headers: new Headers({
                 'Content-Type': 'application/json',

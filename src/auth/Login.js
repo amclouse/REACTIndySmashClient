@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css'
+import APIURL from '../helpers/environment';
+
 
 
 const Login = (props) => {
@@ -10,7 +12,7 @@ const Login = (props) => {
   const handleSubmit = (e) => {
     console.log('Yes!')
     e.preventDefault();
-    fetch('http://localhost:3002/smash/user/login', {
+    fetch(`${APIURL}/smash/user/login`, {
       method: 'POST',
       body: JSON.stringify({email: email, password: password}),
       headers: new Headers({

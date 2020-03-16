@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap'
+import APIURL from '../../src/helpers/environment'
+
 
 const TourneyCreate = (props) => {
 console.log('TOURNEY CREATE: ', props)
@@ -15,7 +17,7 @@ console.log('TOURNEY CREATE: ', props)
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log('CREATE HIT')
-    fetch('http://localhost:3002/smash/tourney/create', {
+    fetch(`${APIURL}/smash/tourney/create`, {
             method: 'POST',
             body: JSON.stringify({ name: name, date: date, location: location, maxPlayers: maxPlayers, format: format, version: version, prizePool: prizePool}),
             headers: new Headers({

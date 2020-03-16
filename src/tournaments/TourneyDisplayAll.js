@@ -3,6 +3,8 @@ import {
   Card, Button, CardImg, CardTitle, CardText, CardDeck,
   CardSubtitle, CardBody
 } from 'reactstrap';
+import APIURL from '../../src/helpers/environment'
+
 
 const TourneyDisplayAll = (props) => {
 
@@ -10,7 +12,7 @@ const TourneyDisplayAll = (props) => {
 
   const fetchAllTourneys = (props) => {
     // console.log('INDEX HIT')
-    fetch('http://localhost:3002/smash/tourney/alltourneys', {
+    fetch(`${APIURL}/smash/tourney/alltourneys`, {
       method: 'GET',
       headers: new Headers({
         'Content-Type': 'application/json',
