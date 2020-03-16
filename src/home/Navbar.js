@@ -35,7 +35,7 @@ const Sidebar = (props) => {
       <hr />
       <Switch>
         <Route exact path="/home"><Home /></Route>
-        <Route exact path="/tourney"><TourneyIndex token={props.token} /></Route>
+        <Route exact path="/tourney"><TourneyIndex classname="tourney-index" token={props.token} /></Route>
         {/* <Route exact path="/findtourneys"><TourneyDisplayAll token={props.token} /></Route> */}
       </Switch>
     </div>

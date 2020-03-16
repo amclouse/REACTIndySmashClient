@@ -55,6 +55,10 @@
 .login-button {
     float: right !important;
 }
+/* Tourney Index */
+.tourney-index {
+    background-color: #1a192e;
+}
 /* Tourney Table */
 
 .tourney-table {
@@ -63,9 +67,7 @@
     url('https://www.ssbwiki.com/images/thumb/a/a6/Dark_Samus_SSBU.png/1200px-Dark_Samus_SSBU.png');
     background-size: cover;
 }
-.thead {
 
-}
 .table-td {
     font-size: 30px !important;
     font-weight: bold;
