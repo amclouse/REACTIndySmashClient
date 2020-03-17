@@ -16,26 +16,31 @@ console.log('TOURNEY CREATE: ', props)
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('CREATE HIT')
-    fetch(`${APIURL}/smash/tourney/create`, {
-            method: 'POST',
-            body: JSON.stringify({ name: name, date: date, location: location, maxPlayers: maxPlayers, format: format, version: version, prizePool: prizePool}),
-            headers: new Headers({
-                'Content-Type': 'application/json',
-                'Authorization': props.token
-            })
-        }).then((res) => res.json())
-            .then((logData) => {
-                console.log(logData);
-                setName('')
-                setDate('')
-                setLocation('')
-                setMaxPlayers('')
-                setFormat('')
-                setVersion('')
-                setPrizePool('')
-                props.fetchTourneys()
-            })
+        if(name && date && location && maxPlayers && format && version && prizePool) {
+            fetch(`${APIURL}/smash/tourney/create`, {
+                method: 'POST',
+                body: JSON.stringify({ name: name, date: date, location: location, maxPlayers: maxPlayers, format: format, version: version, prizePool: prizePool}),
+                headers: new Headers({
+                    'Content-Type': 'application/json',
+                    'Authorization': props.token
+                })
+            }).then((res) => res.json())
+                .then((logData) => {
+                    console.log(logData);
+                    setName('')
+                    setDate('')
+                    setLocation('')
+                    setMaxPlayers('')
+                    setFormat('')
+                    setVersion('')
+                    setPrizePool('')
+                    props.fetchTourneys()
+                })
+        } else { alert('Please fill out all fields')
+
+        }
+
+        
     }
 
     return (        

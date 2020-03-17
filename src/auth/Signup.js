@@ -6,22 +6,23 @@ const Signup = (props) => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
-
-    const handleSubmit = (event) => {
-        console.log('Yes!')
-        event.preventDefault();
-        fetch(`${APIURL}/smash/user/signup`, {
-            method: 'POST',
-            body: JSON.stringify({ email: email, password: password }),
-            headers: new Headers({
-                'Content-Type': 'application/json'
-            })
-        }).then(
-            (response) => response.json()
-        ).then((data) => {
-            props.updateToken(data.sessionToken)
-        })
-    }
+        const handleSubmit = (event) => {
+            event.preventDefault();
+            if(email && password){
+                fetch(`${APIURL}/smash/user/signup`, {
+                    method: 'POST',
+                    body: JSON.stringify({email: email, password: password}),
+                    headers: new Headers({
+                        'Content-Type' : 'application/json'
+                    })
+                })
+                .then(response => response.json())
+                .then(data => props.updateToken(data.sessionToken))
+            }else{
+                alert('Please fill out all fields')
+            }
+        }
+    
 
     return (
         <Form onSubmit={handleSubmit} >
