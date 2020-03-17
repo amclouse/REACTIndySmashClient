@@ -12,7 +12,6 @@ import './css/main.css'
 
 function App() {
   const [sessionToken, setSessionToken] = useState('')
-  console.log('APP POINT: ', sessionToken)
 
   useEffect(() => {
     if (localStorage.getItem('token')) {
@@ -23,7 +22,7 @@ function App() {
   const clearToken = () => {
     localStorage.clear();
     setSessionToken('')
-    console.log(`${sessionToken} cleared`)
+
   }
 
   const updateToken = (newToken) => {
