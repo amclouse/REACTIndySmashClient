@@ -9,11 +9,14 @@ import {
 import Home from './home'
 import TourneyIndex from '../tournaments/TourneyIndex'
 import { Button } from 'reactstrap'
-// import TourneyDisplayAll from '../tournaments/TourneyDisplayAll'
+import TourneyDisplayAll from '../tournaments/TourneyDisplayAll'
 
 
 
 const Sidebar = (props) => {
+
+  console.log(`NAVBAR: ${props.token}`)
+
   return (
     <div>
       <h3></h3>
@@ -36,7 +39,7 @@ const Sidebar = (props) => {
       <Switch>
         <Route exact path="/home"><Home /></Route>
         <Route exact path="/tourney"><TourneyIndex classname="tourney-index" token={props.token} /></Route>
-        {/* <Route exact path="/findtourneys"><TourneyDisplayAll token={props.token} /></Route> */}
+        <Route exact path="/findtourneys"><TourneyDisplayAll token={props.token} /></Route>
       </Switch>
     </div>
   );

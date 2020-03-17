@@ -4,6 +4,9 @@ import Sidebar from './Navbar'
 
 
 const Home = (props) => {
+
+    console.log(`HOME: ${props.token}`)
+
     return (
 
         <div>

@@ -11,7 +11,8 @@ import './css/main.css'
 
 
 function App() {
-  const [sessionToken, setSessionToken] = useState(undefined)
+  const [sessionToken, setSessionToken] = useState('')
+  console.log('APP POINT: ', sessionToken)
 
   useEffect(() => {
     if (localStorage.getItem('token')) {

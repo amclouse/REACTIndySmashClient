@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody} from 'reactstrap'
-import APIURL from '../../src/helpers/environment'
+import APIURL from '../helpers/environment'
 
 
 
@@ -14,7 +14,7 @@ const TourneyEdit = (props) => {
     const [editPrizePool, setEditPrizePool] = useState(props.tourneysToUpdate.prizePool)
     const tourneyUpdate = (event, tourneys) => {
         event.preventDefault();
-        fetch(`${APIURL}/${props.tourneysToUpdate.id}`, {
+        fetch(`${APIURL}/smash/tourney/edit/${props.tourneysToUpdate.id}`, {
             method: 'PUT',
             body: JSON.stringify({name: editName, location: editLocation, date: editDate, maxPlayers: editMaxPlayers, format: editFormat, version: editVersion, prizePool: editPrizePool}),
             headers: new Headers({

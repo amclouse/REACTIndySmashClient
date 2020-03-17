@@ -43,7 +43,7 @@ const TourneyIndex = (props) => {
     
 
     return (
-        <Container>
+        <Container className="tourney-index-container">
             <Row>
                 <Col md="3">
                     <TourneyCreate fetchTourneys={fetchTourneys} token={props.token} />

@@ -1,13 +1,13 @@
 import React from 'react';
 import {Table, Button} from 'reactstrap'
-import APIURL from '../../src/helpers/environment'
+import APIURL from '../helpers/environment'
 
 
 const TourneyTable = (props) => {
     console.log(`TABLE PROPS: `,props)
 
     const deleteTourneys = (tourneys) => {
-        fetch(`${APIURL}/${tourneys.name}`, {
+        fetch(`${APIURL}/smash/tourney/delete/${tourneys.name}`, {
             method: 'DELETE',
             headers: new Headers({
                 'Content-Type': 'application/json',
@@ -39,6 +39,7 @@ const TourneyTable = (props) => {
             )
         })
     }
+    
     return(
         <>
         {console.log('got it')}

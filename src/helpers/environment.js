@@ -11,3 +11,4 @@ switch (window.location.hostname) {
 }
 
 export default APIURL;
+

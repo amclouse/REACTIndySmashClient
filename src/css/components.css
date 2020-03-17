@@ -17,9 +17,7 @@
 .display-3 {
     font-size: 200px;
     -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color:#080024;
-    
-    /* font-weight: bold; */
+    -webkit-text-stroke-color: white;
 }
 
 .lead {
@@ -34,30 +32,50 @@
     /* background-color:  */
 }
 
+.login-button :hover {
+    background-color:#bf2424!important;
+    text-decoration: none;
+}
+
+.signup-formgroup {
+    text-align: center;
+    width: 400px;
+}
+
 /* Nav */
 .Nav {
-    background-color: black !important;
+    background-color: grey !important;
     height: 70px !important;
     /* text */
-    color: black;
+    color: black !important;
     font-family: 'Roboto Mono', monospace;
     list-style: inline;
 }
+
 .nav-link {
     text-decoration: none;
-    color: black;
+    color: black !important;
 }
 
 .nav-link :hover {
     color: red; 
 }
 
-.login-button {
-    float: right !important;
+.password-inputs {
+    -webkit-text-security: square;
 }
+/* Tourney Display All */
+
+.display-all-card {
+    width: 100px !important;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+
 /* Tourney Index */
-.tourney-index {
-    background-color: #1a192e;
+.tourney-index-container {
+    background-color: black !important;
 }
 /* Tourney Table */
 
@@ -69,6 +87,6 @@
 }
 
 .table-td {
-    font-size: 30px !important;
+    font-size: 20px !important;
     font-weight: bold;
 }

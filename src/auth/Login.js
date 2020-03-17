@@ -35,7 +35,7 @@ const Login = (props) => {
       {' '}
       <FormGroup>
         <Label htmlFor="password" hidden>Password</Label>
-        <Input onChange={(e) => setPassword(e.target.value)} name="password" value={password} placeholder="Password" />
+        <Input className="password-inputs" onChange={(e) => setPassword(e.target.value)} name="password" value={password} placeholder="Password" />
       </FormGroup>
       {' '}
       <Button type="submit" className="login-button">Submit</Button>
