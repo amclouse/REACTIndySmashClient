@@ -49,7 +49,6 @@
     /* text */
     color: black !important;
     font-family: 'Roboto Mono', monospace;
-    list-style: inline;
 }
 
 .nav-link {
@@ -68,7 +67,7 @@
 
 .display-all-card {
     width: 100px !important;
-    height: 100px;
+    height: 350px;
     display: flex;
     justify-content: center;
 }
@@ -77,6 +76,7 @@
 .tourney-index-container {
     background-color: black !important;
 }
+
 /* Tourney Table */
 
 .tourney-table {
