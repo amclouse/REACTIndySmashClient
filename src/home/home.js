@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button } from 'reactstrap'
 import Sidebar from './Navbar'
+import Example from './Homepage'
 
 
 const Home = (props) => {
@@ -10,10 +11,9 @@ const Home = (props) => {
     return (
 
         <div>
-
-            <Button onClick={props.clickLogout}>Logout</Button>
+            <Button className="logout" onClick={props.clickLogout}>Logout</Button>
             <Sidebar className="sidebar" token={props.token} />
-
+            <Example />
         </div>
     )
 }

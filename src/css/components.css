@@ -1,13 +1,43 @@
+body {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+#root {
+    text-align: center;
+    background-color:black;
+    background-image:
+    radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+    radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+    radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+    radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+}
+
 /* Auth */
+.btn {
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.btn :hover {
+        background-image: url('./assets/samus-pixel-art-png-14.png') !important;
+}
+
+.logout {
+        background-image: url('./assets/samus-pixel-art-png-14.png') !important;
+}
+
 .jumbotron {
     background-image: 
     linear-gradient(90deg, rgba(8,0,36,0.4822303921568627) 0%, rgba(250,0,0,0.3477766106442577) 12%, rgba(227,211,180,0.6446953781512605) 39%, rgba(250,0,0,0.3449754901960784) 66%, rgba(8,0,36,0.6250875350140056) 100%),
     url('https://venturebeat.com/wp-content/uploads/2018/06/Super-Smash-Bros-Switch-E3-2018.jpg?w=1200&strip=all');
     background-size: cover;
-    display: block;
+    /* display: block; */
     font-weight: 20px;
-    height: 400px;
     margin: 0px;
+    height: 350px;
+    margin-bottom: 0px !important;
 }
 .overlay {
     background: rgb(36,3,0);
@@ -27,28 +57,59 @@
     font-size: 3em;
 }
 
-.login-button {
-    background-image: url(./assets/samus-helmet-png-1-transparent.png);
-    /* background-color:  */
-}
-
-.login-button :hover {
-    background-color:#bf2424!important;
+.auth-buttons {
     text-decoration: none;
 }
 
-.signup-formgroup {
-    text-align: center;
-    width: 400px;
+.auth-buttons :hover {
+    text-decoration: none;
+    background-color: black !important;
 }
 
+.MuiButton-label {
+    background-image: url(./assets/samus-pixel-art-png-14.png);
+}
+
+.auth-labels {
+    color: whitesmoke !important;
+    font-size: 50px;
+    border-radius: 10%;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.auth-formgroups {
+    text-align: center;
+    /* width: 40px; */
+}
+
+.password-inputs {
+    -webkit-text-security: square;
+}
+/***********************/
 /* Nav */
+/***********************/
+
 .Nav {
-    background-color: grey !important;
+    background-color: whitesmoke !important;
     height: 70px !important;
-    /* text */
     color: black !important;
-    font-family: 'Roboto Mono', monospace;
+    font-size: 20px;
+}
+
+.Nav a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Raleway', sans-serif;
+}
+
+.Nav a:active {
+    color: blueviolet;
+}
+
+.nav-link :hover {
+    text-decoration: none;
+    color: red; 
 }
 
 .nav-link {
@@ -56,37 +117,128 @@
     color: black !important;
 }
 
-.nav-link :hover {
-    color: red; 
+
+/***********************/
+/* Tourney DisplayAll Cards */
+/***********************/
+
+
+.card-div img {
+    animation: pop 0.3s linear 1;
 }
 
-.password-inputs {
-    -webkit-text-security: square;
+.card-div :hover {
+    animation: pop 0.3s linear 1;
 }
-/* Tourney Display All */
+
+@keyframes pop{
+    50%  {transform: scale(1.2);}
+
+}
 
 .display-all-card {
-    width: 100px !important;
-    height: 350px;
+    /* display: flexbox; */
+    width: 350px !important;
+    height: 500px;
     display: flex;
     justify-content: center;
-}
-
-/* Tourney Index */
-.tourney-index-container {
+    margin-top: 10px;
     background-color: black !important;
+    color: black;
+    font-family: 'Kanit', sans-serif;
+    font-weight: bolder;
+    font-size: 25px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: whitesmoke;
+    background-image: 
+    url(./assets/3ds-drawing-super-smash-bros-13-transparent.png);
+    background-size: cover;
+    /* border: 2px solid whitesmoke !important; */
 }
 
+.display-all-card :hover {
+    /* background-color: teal; */
+    background-image: 
+    linear-gradient(90deg, rgba(0,0,0,0.9556197478991597) 0%, rgba(82,17,17,0.4234068627450981) 12%, rgba(19,15,8,0.4066001400560224) 46%, rgba(0,160,250,0.196516106442577) 76%, rgba(8,0,36,0.5018382352941176) 100%),
+    url(./assets/transparent-link-super-smash-bros.png);
+    background-size: cover;
+    color: whitesmoke;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+}
+
+#card-title {
+    background: transparent;
+    font-size: 40px;
+    animation: none;
+
+}
+
+#card-text {
+    background: transparent;
+    animation: none;
+}
+
+#card-footer {
+    font-size: 40px;
+    color: red;
+    background: transparent;
+    -webkit-text-stroke-color: transparent;
+    animation: none;
+
+}
+
+/***********************/
+/* Tourney Index */
+/***********************/
+
+.tourney-index-container {
+    background: rgb(246,229,229);
+    background: linear-gradient(119deg, rgba(246,229,229,0.9556197478991597) 0%, rgba(82,17,17,0.4234068627450981) 12%, rgba(38,16,11,1) 32%, rgba(19,15,8,0) 49%, rgba(0,160,250,0.196516106442577) 76%, rgba(8,0,36,0.5018382352941176) 100%);
+    width: 1700px !important;
+    margin-bottom: 70px;
+    justify-content: space-evenly;
+    /* box-shadow: grey 10px 10px; */
+    border-width: 3px;
+    border-style: solid;
+    border-image: 
+    linear-gradient(
+      to bottom, 
+      red, 
+      rgba(0, 0, 0, 0)
+    ) 1 100%;
+    z-index: 2;
+    color: whitesmoke;
+}
+
+
+
+/***********************/
 /* Tourney Table */
+/***********************/
 
 .tourney-table {
     background-image: 
     linear-gradient(90deg, rgba(8,0,36,0.6811099439775911) 0%, rgba(25,0,250,0.29175420168067223) 12%, rgba(227,211,180,0.4234068627450981) 39%, rgba(0,160,250,0.196516106442577) 66%, rgba(8,0,36,0.5018382352941176) 100%),
     url('https://www.ssbwiki.com/images/thumb/a/a6/Dark_Samus_SSBU.png/1200px-Dark_Samus_SSBU.png');
     background-size: cover;
+    margin-bottom: 30px !important;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+.thead {
+    color: whitesmoke;
 }
 
 .table-td {
     font-size: 20px !important;
     font-weight: bold;
+    color: whitesmoke;
+}
+
+.update-button {
+    background-color: teal;
 }

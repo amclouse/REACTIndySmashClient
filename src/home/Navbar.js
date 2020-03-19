@@ -12,7 +12,6 @@ import { Button } from 'reactstrap'
 import TourneyDisplayAll from '../tournaments/TourneyDisplayAll'
 
 
-
 const Sidebar = (props) => {
 
   console.log(`NAVBAR: ${props.token}`)
@@ -28,17 +27,12 @@ const Sidebar = (props) => {
         <NavItem>
           <NavLink href="#"><Link to="/findtourneys">Find Tournaments</Link></NavLink>
         </NavItem>
-        <NavItem>
-          <NavLink disabled href="#"></NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink disabled href="#"></NavLink>
-        </NavItem>
       </Nav>
+      
       <hr />
       <Switch>
         <Route exact path="/home"><Home /></Route>
-        <Route exact path="/tourney"><TourneyIndex classname="tourney-index" token={props.token} /></Route>
+        <Route exact path="/tourney"><TourneyIndex className="tourney-index" token={props.token} /></Route>
         <Route exact path="/findtourneys"><TourneyDisplayAll token={props.token} /></Route>
       </Switch>
     </div>

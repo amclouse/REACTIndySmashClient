@@ -21,14 +21,14 @@ const Login = (props) => {
       }).then(response => response.json())
         .then(data => props.updateToken(data.sessionToken));
     } else {
-      alert('Failed to authenticate email || password')
+      alert('Please fill out all fields')
     }
   }
 
   return (
     <Form onSubmit={handleSubmit} >
       <FormGroup>
-        <Label htmlFor="email">Login</Label>
+        <Label className="auth-labels" htmlFor="email">Login</Label>
         <Input onChange={(e) => setEmail(e.target.value)} name="email" value={email} placeholder="Email" />
       </FormGroup>
       {' '}
@@ -37,7 +37,7 @@ const Login = (props) => {
         <Input className="password-inputs" onChange={(e) => setPassword(e.target.value)} name="password" value={password} placeholder="Password" />
       </FormGroup>
       {' '}
-      <Button type="submit" className="login-button">Submit</Button>
+      <Button type="submit" className="auth-buttons">Submit</Button>
     </Form>
   );
 }

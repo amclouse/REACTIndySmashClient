@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import {
-  Card, Table, Button, CardImg, CardTitle, CardText, CardDeck,
-  CardSubtitle, CardBody
+  Card, CardTitle, CardText, CardDeck,
+   CardBody, CardFooter
 } from 'reactstrap';
 import '../css/main.css'
+import styled from 'styled-components'
 import 'bootstrap/dist/css/bootstrap.css'
 import APIURL from '../../src/helpers/environment'
 
@@ -26,8 +27,8 @@ const TourneyDisplayAll = (props) => {
         // console.log(`FETCHED TOURNEYS: `, logData)
         setTourneys(logData)
       })
-
   }
+
   useEffect(() => {
     // console.log(`USE EFFECT HIT!`)
     fetchAllTourneys()
@@ -36,64 +37,30 @@ const TourneyDisplayAll = (props) => {
   const tourneyMapper = () => {
     return tourneys.map((tourneys, index) => {
       return (
-        <Card className="display-all-card" key={index}>
-          <CardBody body inverse color="info">
-            <CardTitle>Tournament</CardTitle>
-            <CardTitle>{tourneys.name}</CardTitle>
-            <CardSubtitle>{tourneys.date}</CardSubtitle>
-            <CardText>{tourneys.location}</CardText>
-            <CardText>{tourneys.maxPlayers}</CardText>
-            <CardText>{tourneys.format}</CardText>
-            <CardText>{tourneys.version}</CardText>
-            <CardText>{tourneys.prizePool}</CardText>
-          </CardBody>
-        </Card>
+        <div className="card-div">
+          <Card className="display-all-card" key={index}>
+            <CardBody className="card-body" body inverse color="info">
+              <CardTitle id="card-title">{tourneys.name}</CardTitle>
+              <CardText id="card-text">{tourneys.location}</CardText>
+              <CardText id="card-text">{tourneys.maxPlayers}</CardText>
+              <CardText id="card-text">{tourneys.format}</CardText>
+              <CardText id="card-text">{tourneys.version}</CardText>
+              <CardText id="card-text">{tourneys.prizePool}</CardText>
+              <CardFooter id="card-footer">{tourneys.date}</CardFooter>
+            </CardBody>
+          </Card>
+        </div>
       )
     })
   }
 
   return (
-    <CardDeck>
-      {tourneyMapper()}
-    </CardDeck>
+    <div>
+      <CardDeck>
+        {tourneyMapper()}
+      </CardDeck>
+    </div>
   );
 };
 
 export default TourneyDisplayAll;
-//   const tourneyMapperAll = () => {
-
-  //     return tourneys.map((tourneys, index) => {
-  //         return(
-    //             <tr className="table-row" key={index}>
-    //                 <th scope='row'>{tourneys.id}</th>
-  //                 <td className="table-td">{tourneys.name}</td>
-  //                 <td className="table-td">{tourneys.date}</td>
-  //                 <td className="table-td">{tourneys.location}</td>
-  //                 <td className="table-td">{tourneys.maxPlayers}</td>
-  //                 <td className="table-td">{tourneys.format}</td>
-  //                 <td className="table-td">{tourneys.version}</td>
-  //                 <td className="table-td">{tourneys.prizePool}</td>
-
-  //             </tr>
-  //         )
-  //     })
-
-  //     <Table className="tourney-table" striped >
-  //     <thead className="thead">
-  //         <tr>
-  //             <th>#</th>
-  //             <th>Name</th>
-  //             <th>Date</th>
-  //             <th>Location</th>
-  //             <th>MaxPlayers</th>
-  //             <th>Format</th>
-  //             <th>Version</th>
-  //             <th>Prize Pool</th>
-  //         </tr>
-  //     </thead>
-  //     <tbody>
-  //         {tourneyMapperAll()}
-  //     </tbody>
-  //   {/* <h1>{tourneys.name}</h1> */}
-  // </Table>
-  // }

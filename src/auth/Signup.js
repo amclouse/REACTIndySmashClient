@@ -26,8 +26,8 @@ const Signup = (props) => {
 
     return (
         <Form onSubmit={handleSubmit} >
-            <FormGroup >
-                <Label htmlFor="email">Signup</Label>
+            <FormGroup className="signup-formgroup">
+                <Label className="auth-labels" htmlFor="email">Signup</Label>
                 <Input onChange={(e) => setEmail(e.target.value)} name="email" value={email} placeholder="email" />
             </FormGroup>
             {' '}
@@ -35,7 +35,7 @@ const Signup = (props) => {
                 <Label htmlFor="password" hidden>Password</Label>
                 <Input className="password-inputs" onChange={(e) => setPassword(e.target.value)} name="password" value={password} placeholder="password" />
             </FormGroup>
-            <Button>Submit</Button>
+            <Button className="auth-buttons">Submit</Button>
         </Form>
     );
 }

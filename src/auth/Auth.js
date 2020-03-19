@@ -12,7 +12,7 @@ const Auth = (props) => {
             <Jumbotron classname="jumbotron" fluid>
                 <Container fluid>
                     <h1 className="display-3">Smash Indy</h1>
-                    <h3 className="lead">The next place to find tournaments in your area.</h3>
+                    <h3 className="lead">The next place to find tournaments in your area</h3>
                 </Container>
             </Jumbotron>
             <Container className="auth-container">
