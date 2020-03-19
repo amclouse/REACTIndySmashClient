@@ -36,7 +36,7 @@ body {
     /* display: block; */
     font-weight: 20px;
     margin: 0px;
-    height: 350px;
+    height: 400px;
     margin-bottom: 0px !important;
 }
 .overlay {
@@ -121,7 +121,9 @@ body {
 /***********************/
 /* Tourney DisplayAll Cards */
 /***********************/
-
+.card-deck {
+    margin: 10px;
+}
 
 .card-div img {
     animation: pop 0.3s linear 1;
@@ -153,7 +155,8 @@ body {
     background-image: 
     url(./assets/3ds-drawing-super-smash-bros-13-transparent.png);
     background-size: cover;
-    /* border: 2px solid whitesmoke !important; */
+    
+    border: 2px solid whitesmoke !important;
 }
 
 .display-all-card :hover {
